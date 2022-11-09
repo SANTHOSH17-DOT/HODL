@@ -31,14 +31,14 @@ function App() {
       const bal = await web3.eth.getBalance(accounts[0]);
       setBalance(bal/1e18);
       console.log(instance)
-      const res = await instance.methods.getDepositAmt().call({from:acc});
-      console.log(res)
-      // setDepositAmt(amount.toString())
-      // setHodlTime(hodlTime.toString())
-      // console.log(amount,hodlTime)
+      const amount = await instance.methods.getDepositAmt().call({from:acc});
+      const hodlTime = await instance.methods.getHodlTime().call({from:acc});
+      setDepositAmt(amount.toString())
+      setHodlTime(hodlTime.toString())
+      console.log(amount,hodlTime)
     }
     getAccDetails()
-    // setInterval(getAccDetails)
+    setInterval(getAccDetails)
     
   },[])
   return (
@@ -60,8 +60,8 @@ function App() {
       
       <div>
       </div>
-      {depositAmt > 0 ? (<><p> Amount deposited: {depositAmt} </p>
-      <p> Freeze time: {hodlTime} </p></>):(<p>No HODL</p>)}
+      {depositAmt > 0 ? (<><p> Amount deposited: {depositAmt/1e18} </p>
+      <p> Freeze time: {new Date(hodlTime*1000)} </p></>):(<p>No HODL</p>)}
       <button onClick={handleWithdrawal} > Withdraw </button>
     </div>
   );
