@@ -25,5 +25,5 @@ npm run build
 ```bash
 npm start
 ```
-## Sample
-![image](https://user-images.githubusercontent.com/74037707/200822982-3dbd07ca-69f4-4104-81ea-ab594663aa31.png)
+## Screenshots
+![image](https://user-images.githubusercontent.com/74037707/201468914-0ca08679-c34a-4e55-94dc-d1a3118e77d9.png)
