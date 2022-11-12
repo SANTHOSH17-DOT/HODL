@@ -4,5 +4,26 @@
 - Truffle framework
 - Ganache blockchain for development
 - React
+## Setup
+- Install **Ganache**
+- To deploy the smart contract, from the **smart-contract** directory, run
+```bash
+truffle migrate
+```
+- Update the abi and the contract address in the src/ folder
+- Install **Metamask** browser extension and add Ganache network to it
+
+### Add the wallet as a browser extension
+- From the root directory,
+```bash 
+npm run build
+```
+- Open **chrome://extensions/** and click on `Load unpacked`
+- Choose the build directory of this project
+### For development
+- From the root directory, run
+```bash
+npm start
+```
 ## Sample
 ![image](https://user-images.githubusercontent.com/74037707/200822982-3dbd07ca-69f4-4104-81ea-ab594663aa31.png)
