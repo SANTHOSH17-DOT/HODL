@@ -27,3 +27,11 @@ npm start
 ```
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/74037707/201468914-0ca08679-c34a-4e55-94dc-d1a3118e77d9.png)
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
