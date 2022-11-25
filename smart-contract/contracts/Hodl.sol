@@ -16,11 +16,15 @@ contract Hodl {
         _;
     }
 
-    modifier deposit_validation(uint256 _freezeTime) {
+    modifier deposit_validation(address _user, uint256 _freezeTime) {
         require(msg.value > 0, "You have to send some ether");
         require(
             _freezeTime > block.timestamp,
             "The freeze time must be in the future"
+        );
+        require(
+            _freezeTime > freeze_time[_user],
+            "The freeze time must be greater than the previous freeze time"
         );
         _;
     }
@@ -37,7 +41,7 @@ contract Hodl {
     function deposit(uint256 _freezeTime)
         external
         payable
-        deposit_validation(_freezeTime)
+        deposit_validation(msg.sender, _freezeTime)
     {
         balances[msg.sender] += msg.value;
         freeze_time[msg.sender] = _freezeTime;
