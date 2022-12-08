@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/** @format */
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import { infuraProvider } from "wagmi/providers/infura";
 import { WagmiConfig, createClient, configureChains, chain } from "wagmi";
 import {
@@ -12,9 +14,9 @@ import {
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon,chain.polygonMumbai,chain.goerli],
+  [chain.mainnet, chain.goerli],
   [
     infuraProvider({
       apiKey: process.env.REACT_APP_INFURA_APIKEY,

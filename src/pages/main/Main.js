@@ -13,7 +13,11 @@ export const Main = () => {
     abi: Hodl.abi,
     method: "getHodlTime",
   });
-  const { data: depositAmt } = useContractRead({
+  const {
+    data: depositAmt,
+    isSuccess,
+    isLoading,
+  } = useContractRead({
     address: CONTRACT_ADDRESS,
     abi: Hodl.abi,
     method: "getDepositAmt",
@@ -21,10 +25,12 @@ export const Main = () => {
 
   return (
     <div className={styles.main_container}>
-      <h1> HODL </h1>
+      <h1 className={styles.title}> HODL </h1>
       <ConnectButton />
       <DepositContainer />
-      <WithdrawContainer depositAmt={depositAmt} hodlTime={hodlTime} />
+      {depositAmt > 0 && (
+        <WithdrawContainer depositAmt={depositAmt} hodlTime={hodlTime} />
+      )}
     </div>
   );
 };

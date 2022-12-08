@@ -1,5 +1,6 @@
 /** @format */
-
+require("dotenv").config();
+const { MNEMONIC, INFURA_API_KEY, ALCHEMY_API_KEY } = process.env;
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 module.exports = {
   networks: {
@@ -9,9 +10,13 @@ module.exports = {
       network_id: "*", // Any network (default: none)
     },
     matic_test: {
-      provider: () =>
-        new HDWalletProvider(process.env.MNEMONIC, process.env.ALCHEMY_API_KEY),
+      provider: () => new HDWalletProvider(MNEMONIC, ALCHEMY_API_KEY),
       network_id: "80001",
+      gas: 4465030,
+    },
+    goerli: {
+      provider: () => new HDWalletProvider(MNEMONIC, INFURA_API_KEY),
+      network_id: "5",
       gas: 4465030,
     },
   },

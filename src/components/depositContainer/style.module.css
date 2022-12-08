@@ -1,0 +1,41 @@
+/** @format */
+
+.input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+}
+
+.date_input {
+    width: 40%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+}
+
+.deposit_btn {
+    background-color: #1a1b1f;
+    color: white;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+
+.bold_text {
+    font-weight: 800;
+    color: #1a1b1f;
+}

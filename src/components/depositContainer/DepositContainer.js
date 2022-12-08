@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useContractWrite, usePrepareContractWrite } from "wagmi";
 import { CONTRACT_ADDRESS } from "../../config";
 import Hodl from "../../smart-contract/build/contracts/Hodl.json";
+import styles from "./style.module.css";
 
 export const DepositContainer = () => {
   const [amt, setAmt] = useState(0);
@@ -19,29 +20,35 @@ export const DepositContainer = () => {
     functionName: "deposit",
     args: [freezeTime],
     overrides: {
-      value: `${ethers.utils.parseEther(amt)}`,
+      value: ethers.utils.parseUnits(amt.toString(), 18),
     },
   });
   const { data, isLoading, isSuccess, write } = useContractWrite(config);
   return (
     <div id="deposit_container">
       <div>
-        <label> Amount </label>
         <input
-          type="text"
-          placeholder="Deposit Eth"
-          onChange={(e) => setAmt(e.target.value)}
+          type="number"
+          placeholder="Deposit ETH"
+          onChange={(e) =>
+            setAmt((amt) => (e.target.value > 0 ? e.target.value : 0))
+          }
+          className={styles.input}
         />
       </div>
       <div>
-        <label> HODL time </label>
+        <label className={styles.bold_text}> HODL TIME </label>
         <input
+          className={styles.date_input}
           type="datetime-local"
           onChange={(e) => handleFreezeTime(e.target.value)}
         />
-        <button className="btn" disabled={!write} onClick={() => write?.()}>
-          {" "}
-          Deposit{" "}
+        <button
+          className={styles.deposit_btn}
+          disabled={!write}
+          onClick={() => write?.()}
+        >
+          Deposit
         </button>
       </div>
     </div>

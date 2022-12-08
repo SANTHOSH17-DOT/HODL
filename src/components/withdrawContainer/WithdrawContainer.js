@@ -14,16 +14,12 @@ export const WithdrawContainer = ({ depositAmt, hodlTime }) => {
   const { data, isLoading, isSuccess, write } = useContractWrite(config);
   return (
     <>
-      {depositAmt > 0 && (
-        <>
-          <p> Amount deposited: {depositAmt / 1e18} ETH</p>
-          <p> Freeze time: {new Date(hodlTime * 1000).toString()} </p>
-          <button onClick={() => write?.()} className="btn">
-            {" "}
-            Withdraw{" "}
-          </button>
-        </>
-      )}
+      <p> Amount deposited: {depositAmt / 1e18} ETH</p>
+      <p> Freeze time: {new Date(hodlTime * 1000).toString()} </p>
+      <button onClick={() => write?.()} className="btn">
+        {" "}
+        Withdraw{" "}
+      </button>
     </>
   );
 };
