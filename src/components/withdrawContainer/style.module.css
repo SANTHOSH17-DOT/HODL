@@ -1,0 +1,20 @@
+/** @format */
+
+.withdraw_container {
+    background: #1a1b1f;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    width: 85%;
+}
+
+.withdraw_btn {
+    background: white;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    outline: none;
+}
