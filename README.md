@@ -1,5 +1,7 @@
-# HODL(Under development)
+# HODL
 **Hold On for Dear Life** is a time lock wallet to which users can send their crypto and set a HODL time. They can only withdraw their crypto once the HODL time passes. This prevents the user from selling crypto on the market crash.
+
+Live - https://hodl-wallet.vercel.app/
 ## Tech stack
 - Truffle framework
 - Ganache blockchain for development
