@@ -40,8 +40,8 @@ export const Main = () => {
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
     const contract = new ethers.Contract(CONTRACT_ADDRESS, Hodl.abi, signer);
-    const hodlTime = await contract.getHodlTime();
-    setHodlTime(hodlTime.toNumber());
+    const hodltime = await contract.getHodlTime();
+    return hodltime.toNumber();
   };
   const getDepositAmt = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
@@ -49,11 +49,11 @@ export const Main = () => {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(CONTRACT_ADDRESS, Hodl.abi, signer);
     const depositAmt = await contract.getDepositAmt();
-    setDepositAmt(depositAmt.toNumber() / 1e18);
+    return depositAmt / 1e18;
   };
   useEffect(() => {
-    getHodlTime();
-    getDepositAmt();
+    getHodlTime().then((res) => setHodlTime(res));
+    getDepositAmt().then((res) => setDepositAmt(res));
   }, []);
   return (
     <div className={styles.main_container}>
@@ -61,7 +61,12 @@ export const Main = () => {
       <ConnectButton />
       <DepositContainer />
       {depositAmt > 0 && (
-        <WithdrawContainer depositAmt={depositAmt} hodlTime={hodlTime} />
+        <WithdrawContainer
+          depositAmt={depositAmt}
+          hodlTime={hodlTime}
+          setDepositAmt={setDepositAmt}
+          setHodlTime={setHodlTime}
+        />
       )}
     </div>
   );

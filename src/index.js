@@ -13,6 +13,7 @@ import {
   darkTheme,
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const { chains, provider } = configureChains(
@@ -36,11 +37,13 @@ const wagmiClient = createClient({
 
 root.render(
   <React.StrictMode>
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} theme={darkTheme()}>
-        <App />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <ChakraProvider>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains} theme={darkTheme()}>
+          <App />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </ChakraProvider>
   </React.StrictMode>
 );
 

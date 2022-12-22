@@ -1,16 +1,1 @@
 /** @format */
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #000;
-    position: relative;
-    height: 100vh;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(-240deg, #171717, #241c1d, #0d0a0d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(-240deg, #171717, #241c1d, #0d0a0d);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-}

@@ -30,12 +30,11 @@
 }
 
 .enter_btn {
-    background: none;
     color: white;
     border-radius: 10px;
     border: 2px solid white;
     padding: 5px 20px;
-    margin: 5px 0px;
+    margin: 5px 0px -20px 0px;
     font-size: large;
     font-weight: 800;
     cursor: pointer;

@@ -26,7 +26,12 @@ npm run build
 npm start
 ```
 ## Screenshots
-![image](https://user-images.githubusercontent.com/74037707/201468914-0ca08679-c34a-4e55-94dc-d1a3118e77d9.png)
+![image](https://user-images.githubusercontent.com/74037707/206703443-96fbe9e5-af87-4c4b-851b-f74b4747fa5c.png)
+![image](https://user-images.githubusercontent.com/74037707/209092178-c921d87b-66fa-4363-b4a8-893c5b37db41.png)
+
+
+
+
 
 ## Contributing
 

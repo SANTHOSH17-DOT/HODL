@@ -7,8 +7,9 @@ import ClockAnimation from "../../lottie/clock.json";
 import Lottie from "react-lottie-player";
 import { useNavigate } from "react-router-dom";
 import { useAccount } from "wagmi";
+import { Button } from "@chakra-ui/react";
 export const Home = () => {
-  const { isDisconnected } = useAccount();
+  const { isDisconnected, isConnecting } = useAccount();
   const navigate = useNavigate();
   const enterHandler = () => {
     navigate("/wallet");
@@ -24,9 +25,15 @@ export const Home = () => {
           {isDisconnected ? (
             <ConnectButton />
           ) : (
-            <button className={styles.enter_btn} onClick={enterHandler}>
+            <Button
+              background={"none"}
+              _hover={{ background: "white", color: "#241c1d" }}
+              isLoading={isConnecting}
+              className={styles.enter_btn}
+              onClick={enterHandler}
+            >
               Enter
-            </button>
+            </Button>
           )}
         </div>
       </div>
