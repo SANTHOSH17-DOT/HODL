@@ -1,0 +1,41 @@
+/** @format */
+
+.hero_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+}
+
+.text_container {
+    position: relative;
+    top: -25px;
+}
+
+.title {
+    font-size: 6.5rem;
+    font-weight: 800;
+    margin-bottom: -15px;
+    text-shadow: 4px 4px 2px rgb(0, 0, 0);
+}
+
+.btn_container {
+    flex-wrap: wrap;
+}
+
+.enter_btn {
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 5px 20px;
+    margin: 5px 0px -20px 0px;
+    font-size: large;
+    font-weight: 800;
+    cursor: pointer;
+}

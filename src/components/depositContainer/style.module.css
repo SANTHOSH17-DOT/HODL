@@ -1,0 +1,48 @@
+/** @format */
+
+.input {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    color: #000;
+    background-color: #fff;
+    box-shadow: -1px 3px 2px rgb(77, 45, 0);
+}
+
+.date_input {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    color: #000;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: -1px 3px 2px rgb(77, 45, 0);
+}
+
+.deposit_btn {
+    background-color: rgb(26, 27, 31);
+    color: #ff9900;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+
+.bold_text {
+    font-weight: 800;
+    color: #1a1b1f;
+}
+
+#deposit_container {
+    position: relative;
+}

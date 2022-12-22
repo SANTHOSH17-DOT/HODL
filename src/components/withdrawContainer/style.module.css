@@ -1,0 +1,27 @@
+/** @format */
+
+.withdraw_container {
+    background: linear-gradient(-240deg, #171717, #241c1d, #0d0a0d);
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.withdraw_btn {
+    background: transparent !important;
+    color: #ff9900;
+    padding: 3px 8px;
+    margin-top: 10px;
+    border: 2px solid #ff9900;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    outline: none;
+}

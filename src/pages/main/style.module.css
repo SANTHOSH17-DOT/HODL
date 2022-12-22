@@ -1,0 +1,53 @@
+/** @format */
+
+.main_container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* From https://css.glass */
+    background: rgba(255, 157, 0, 1);
+    background: -webkit-linear-gradient(-240deg, #ff9900, #ffb219, #ffc34c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-240deg, #ff9900, #ffb219, #ffc34c);
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+    border: none;
+    padding: 25px 20px 35px 20px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    /* withdraw button */
+    background: #f1f1f1;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    color: #444;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    margin: 10px;
+}
+
+#deposit_container {
+    text-align: left;
+}
+
+.title {
+    font-size: 46px;
+    font-weight: 700;
+    text-shadow: 4px 4px #1a1b1f;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
