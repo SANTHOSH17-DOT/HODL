@@ -81,7 +81,9 @@ export const DepositContainer = () => {
           // ISO time format as value
           value={
             freezeTime
-              ? new Date(freezeTime * 1000).toISOString().split(".")[0]
+              ? new Date(freezeTime * 1000 + 5.5 * 60 * 60 * 1000)
+                  .toISOString()
+                  .split(".")[0]
               : ""
           }
           onChange={(e) => handleFreezeTime(e.target.value)}
