@@ -1,5 +1,5 @@
 # HODL
-**Hold On for Dear Life** is a time lock wallet to which users can send their crypto and set a HODL time. They can only withdraw their crypto once the HODL time passes. This prevents the user from selling crypto on the market crash.
+**Hold On for Dear Life** is a time lock wallet to which users can send their crypto and set a HODL time. They can only withdraw their crypto once the HODL time passes. It prevents "Buy at the high and sell at the low."
 
 Live - https://hodl-wallet.vercel.app/
 ## Tech stack
