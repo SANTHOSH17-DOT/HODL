@@ -78,4 +78,5 @@ HODL
 
 We welcome contributions of all kinds! 
 If you are interested in contributing, please take a look at our `contributing.md` file for more information. 
+
 Please note that all contributors are expected to adhere to this project's `code of conduct`.
