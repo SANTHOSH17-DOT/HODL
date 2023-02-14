@@ -6,9 +6,10 @@ It helps prevent users from selling their crypto at low prices.
 
 You can try out the live demo at https://hodl-wallet.vercel.app/
 
-![image](https://user-images.githubusercontent.com/74037707/206703443-96fbe9e5-af87-4c4b-851b-f74b4747fa5c.png)
-
-![image](https://user-images.githubusercontent.com/74037707/209092178-c921d87b-66fa-4363-b4a8-893c5b37db41.png)
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/74037707/206703443-96fbe9e5-af87-4c4b-851b-f74b4747fa5c.png" alt="HODL!"/>
+    <img src="https://user-images.githubusercontent.com/74037707/209092178-c921d87b-66fa-4363-b4a8-893c5b37db41.png" alt="HODL!"/>
+  </p>
 
 ## Tech Stack
   * Truffle Framework
@@ -16,8 +17,8 @@ You can try out the live demo at https://hodl-wallet.vercel.app/
   * React
 
 ## Contract Information
-  * Contract Address: [Insert Contract Address]
-  * Network: [Insert Network Name]
+  * Contract Address: `0x6d119824Eb9c06c02242FFFaB3A8F6775958032F`
+  * Network: `Goerli (chain id: 5)`
 
 ## Setup Instructions
 
@@ -30,12 +31,10 @@ truffle migrate
   * Update the ABI and Contract Address in the `src/` folder.
   
 ### Frontend
-  * Install the **Metamask** browser extension and add the Ganache network to it.
   * From the root directory, run the following command:
 ```bash
 npm run build
 ```
-  * Open `chrome://extensions/` and click on `Load unpacked`.
   * Choose the `build` directory of this project.
   
 ### For Development
@@ -78,5 +77,18 @@ HODL
 
 We welcome contributions of all kinds! 
 If you are interested in contributing, please take a look at our `contributing.md` file for more information. 
+
+### To contribute to the project, please follow these steps:
+
+ * Fork the repository.
+ * Clone the forked repository to your local machine.
+ * Create a new branch for your changes:
+   * `git checkout -b <branch-name>`
+ * Make your changes and commit them with a descriptive message.
+ * Push your changes to your fork:
+   * `git push -u origin <branch-name>`
+ * Create a pull request to the `dev` branch of the main repository.
+ * Wait for feedback and address any review comments.
+ * Once your pull request is approved, it will be merged into the dev branch and deployed to the live demo for testing.
 
 Please note that all contributors are expected to adhere to this project's `code of conduct`.
