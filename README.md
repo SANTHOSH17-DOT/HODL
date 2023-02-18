@@ -81,14 +81,12 @@ If you are interested in contributing, please take a look at our `contributing.m
 ### To contribute to the project, please follow these steps:
 
  * Fork the repository.
-    * ![dev branch](https://github.com/SANTHOSH17-DOT/HODL/tree/dev)
-    * uncheck `copy the main branch only`
  * Clone the forked repository to your local machine.
- * Create a new branch for your changes:
-   * `git checkout -b <branch-name>`
+ * Create a new branch for your changes from the dev branch:
+    * `git checkout -b <branch-name> dev`
  * Make your changes and commit them with a descriptive message.
  * Push your changes to your fork:
-   * `git push -u origin <branch-name>`
+    * `git push -u origin <branch-name>`
  * Create a pull request to the `dev` branch of the main repository.
  * Wait for feedback and address any review comments.
  * Once your pull request is approved, it will be merged into the dev branch and deployed to the live demo for testing.
